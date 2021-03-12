@@ -22,6 +22,7 @@ class Home extends Component {
     render() {
         return (
             <div className='home'> 
+            {console.log(this.state.data)}
                   <ul>
               {this.state.data.map((e,index)=>
               <li className="feed-list-item" key={index}>

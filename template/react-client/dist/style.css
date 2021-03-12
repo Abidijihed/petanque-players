@@ -4,7 +4,7 @@ body {
   font-family: 'PT Serif', sans-serif;
   margin: 0px;
   color: #000000;
-  background-color: #4b8db9cb;
+  background-color: #fcfcfcf8;
   font-size: 1.1em;
 }
 
@@ -113,7 +113,7 @@ button {
   font-size: .9em;
   height: 30px;
   margin-bottom: 15px;
-  border: none;
+  border: groove;
   padding: 5px;
 }
 
@@ -122,7 +122,7 @@ button {
   font-size: .9em;
   display: block;
   height: 400px;
-  border: none;
+  border: groove;
   padding: 5px;
   resize: none;
 }
@@ -159,12 +159,12 @@ button {
 }
 
 .comment-entry:hover {
-  background-color: rgba(52, 152, 219, 0.17);
+  background-color: rgba(24, 20, 214, 0.897);
 }
 
 .post-list-entry {
   list-style: none;
-  border: 1px solid #000000;
+  border: 1px solid #0914b6;
   margin-bottom: 20px;
   padding: 10px;
   width: 75%;
@@ -172,7 +172,7 @@ button {
 
 .post-list-entry:hover {
   cursor: pointer;
-  background-color: rgba(252, 252, 252, 0.959);
+  background-color: rgba(17, 169, 207, 0.959);
 }
 
 .post-list-entry-title {
@@ -217,7 +217,7 @@ button {
 .nav {
   background-color: hsla(234, 100%, 41%, 0.849);
   margin: 0px;
-  padding: 30px;
+  padding: 5px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -235,7 +235,7 @@ button {
 .nav-unselected {
   padding: 5px;
   margin-right: 50px;
-  font-size: 1.5em;
+  font-size: 1em;
 }
 
 .home {

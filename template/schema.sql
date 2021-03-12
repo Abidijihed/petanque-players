@@ -21,10 +21,9 @@ CREATE TABLE IF NOT EXISTS postes(
 );
 CREATE TABLE IF NOT EXISTS adminuser(
     id INT NOT NULL AUTO_INCREMENT,
-    usereName VARCHAR (200),
+   password VARCHAR(255),
    email text ,
     PRIMARY KEY (id)
 );
-INSERT into register (firstName, lastName, email,numberPhone) VALUES ("Jihed", "Abidi", "jiheda14@gmail.com" ,"29490730");
-INSERT into register (firstName, lastName, email,numberPhone) VALUES ("mohamed dhia", "aouichaoui", "dhia12aouichaoui@gmail.com","27211712");
+
 

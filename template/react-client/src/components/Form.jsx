@@ -18,7 +18,7 @@ class Form extends Component {
     }
   
 addUser(e){
-  e.preventDefault()
+  e.preventDefault(e)
   const {firstName ,lastName, email, numberPhone}=this.state
   axios.post('/team',{
     firstName:firstName,
@@ -36,14 +36,15 @@ addUser(e){
       {[e.target.name]:e.target.value}
     );
   }
-     check(){
+     check(e){
+       e.preventDefault()
        const {firstName ,lastName, email, numberPhone}=this.state
-
-       if( email.match(/.+@.+.(com|net|fr)/ && firstName.length && lastName.length )
-        ){
-          swal({title: "good job!",text: "Youre register is done!",icon: "success" })
+       if(email.match(/.+@.+.(com|net|fr)/) && firstName.length>0 && lastName.length> 0 && numberPhone)
+        {
+          this.addUser(e)
+         return swal({title: "good job!",text: "Youre register is done!",icon: "success" })
        }else{
-         swal({title: "Failed!",text: "Please Fill again your form!",icon: "warning" })
+        return swal({title: "Failed!",text: "Please Fill again your form!",icon: "warning" })
        }
      }
     
@@ -73,7 +74,7 @@ addUser(e){
                  <input  onChange={(e)=>this.handleChange(e)} type="number" className="form-control" placeholder="phoneNumber" name="numberPhone" />
               </div>
 
-                <button type="submit" className="btn btn-dark btn-lg btn-block"onClick={(e)=>{this.addUser(e),this.check()}}>Register</button>
+                <button type="submit" className="btn btn-dark btn-lg btn-block" onClick={(e)=>this.check(e)}>Register</button>
             
          </form>
         )

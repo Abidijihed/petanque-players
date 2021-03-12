@@ -22,7 +22,7 @@ class App extends React.Component{
         })
     }
   componentDidMount(){
-          axios.get('/team').then(res=>{
+         axios.get('/team').then(res=>{
            this.setState({
                data:res.data
            })
@@ -40,7 +40,7 @@ class App extends React.Component{
         }else if(view === 'Post'){
             return <Post data={data}/>
         }else if(view === 'Admin'){
-            return <Admin data={data}/>
+            return <Admin />
         }
     }
     render(){

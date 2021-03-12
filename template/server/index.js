@@ -13,6 +13,8 @@ app.use('/team',router)
 app.use('/team', router)
 app.use('/post',router)
 app.use('/new',router)
+app.use('/admin',router)
+app.use('/login',router)
 app.listen(PORT, () => {
   console.log(`listening on  http://localhost:${PORT}`);
 });
