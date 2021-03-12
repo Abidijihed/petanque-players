@@ -3,13 +3,13 @@
 body {
   font-family: 'PT Serif', sans-serif;
   margin: 0px;
-  color: #2C3E50;
-  background-color: #ECF0F1;
+  color: #000000;
+  background-color: #4b8db9cb;
   font-size: 1.1em;
 }
 
 h2 {
-  color: #2C3E50;
+  color: hsla(0, 0%, 0%, 0.829);
 }
 
 .feed-list-item {
@@ -58,11 +58,11 @@ button {
   border-radius: 3px;
   font-family: 'PT Serif', sans-serif;
   color: #ECF0F1;
-  background-color: #E74C3C;
+  background-color: #0408dd;
 }
 
 .post {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   max-width: 800px;
   font-size: 1.3em;
@@ -91,14 +91,13 @@ button {
 }
 
 .create h2 {
-  border-bottom: 1px solid #777777;
+  border-bottom: 1px solid #000000;
   width: 90%;
   font-family: 'Francois One';
 }
 
 .create-editor {
-  width: 40%;
-  float: left;
+  display: block;
 }
 
 .create-preview {
@@ -165,7 +164,7 @@ button {
 
 .post-list-entry {
   list-style: none;
-  border: 1px solid #3498DB;
+  border: 1px solid #000000;
   margin-bottom: 20px;
   padding: 10px;
   width: 75%;
@@ -173,7 +172,7 @@ button {
 
 .post-list-entry:hover {
   cursor: pointer;
-  background-color: rgba(52, 152, 219, 0.17);
+  background-color: rgba(252, 252, 252, 0.959);
 }
 
 .post-list-entry-title {
@@ -211,14 +210,14 @@ button {
 }
 
 .main {
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 30%;
+  margin-right: 30%;
 }
 
 .nav {
-  background-color: #3498DB;
+  background-color: hsla(234, 100%, 41%, 0.849);
   margin: 0px;
-  padding: 10px;
+  padding: 30px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -226,25 +225,19 @@ button {
 }
 
 .nav-selected {
-  padding: 5px;
+  padding: 30px;
   color: white;
   font-weight: bold;
-  margin-right: 5px;
-  font-size: 1.1em;
+  margin-right: 30px;
+  font-size: 1.5em;
 }
 
 .nav-unselected {
   padding: 5px;
-  margin-right: 5px;
-  font-size: 1.1em;
+  margin-right: 50px;
+  font-size: 1.5em;
 }
 
-.feed {
+.home {
   padding: 0px 10% 0px 10%;
-}
-#A {
-  margin: auto !important;
-  width: 50% !important;
-  border: 3px solid green !important;
-  padding: 10px !important;
 }

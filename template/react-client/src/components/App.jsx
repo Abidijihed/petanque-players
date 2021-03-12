@@ -10,17 +10,19 @@ class App extends React.Component{
         super(props)
         this.state={
             view:'home',
-            data:[]
+            data:[],
+            post:{}
         }
         this.changeView=this.changeView.bind(this)
     }
-    changeView(view){
+    changeView(view,post){
         this.setState({
-            view:view
+            view:view,
+            post:post
         })
     }
-   componentDidMount(){
-       axios.get('/team').then(res=>{
+  componentDidMount(){
+          axios.get('/team').then(res=>{
            this.setState({
                data:res.data
            })
@@ -28,14 +30,17 @@ class App extends React.Component{
            console.log(error)
        })
    }
+
     renderView(){
-        const {view}=this.state
+        const {view,data}=this.state 
         if(view ==='home'){
-            return <Home handleClick={()=>this.changeView('anypost')}/>
+            return <Home handleClick={(post)=>this.changeView('anypost',post)} data={data}/>
         }else if(view ==='form'){
-           return <Form mydata={this.state.data}/>
+           return <Form mydata={data}/>
         }else if(view === 'Post'){
-            return <Post />
+            return <Post data={data}/>
+        }else if(view === 'Admin'){
+            return <Admin data={data}/>
         }
     }
     render(){
@@ -47,29 +52,29 @@ class App extends React.Component{
                       onClick={()=>this.changeView('home')}>
                         HOME PAGE
                   </span>
-                  <span className={this.state.view === 'login'
+                  <span className={this.state.view === 'Admin'
                    ? 'nav-selected'
                    : 'nav-unselected'}
-                   onClick={() => this.renderView('login')}>
-                   Admin
+                   onClick={() => this.changeView('Admin')}>
+                   ADMIN
                  </span>
                   <span  className={this.state.view==='home'
                   ?'nav-selected'
                    :'nav-unselected'}
                    onClick={()=>this.changeView('home')}>
-                   All Post
+                   All POST
                    </span>
                    <span className={this.state.view === 'form'
                    ? 'nav-selected'
                    : 'nav-unselected'}
                    onClick={() => this.changeView('form')}>
-                   Register Information
+                  REGISTER INFORMATION
                  </span>
                  <span className={this.state.view === 'Post'
                    ? 'nav-selected'
                    : 'nav-unselected'}
                    onClick={() => this.changeView('Post')}>
-                   Write Post
+                   ADD NEW POST
                  </span>
               </div>
               <div className='home'>

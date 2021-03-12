@@ -7,9 +7,7 @@ connection.connect((error)=>{
   console.log('connection seccesfuly')
 })
 
-module.exports={
-  connection
-}
+module.exports = {connection}
 
 
 

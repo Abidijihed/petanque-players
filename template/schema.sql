@@ -3,7 +3,7 @@ CREATE DATABASE IF NOT EXISTS teampitanque;
 USE teampitanque;
 
 CREATE TABLE IF NOT EXISTS register(
-    id INT NOT NULL AUTO_INCREMENT,
+id INT NOT NULL AUTO_INCREMENT,
 firstName VARCHAR(200),
 lastName VARCHAR (200),
 email text ,
@@ -18,7 +18,13 @@ CREATE TABLE IF NOT EXISTS postes(
     createdAt VARCHAR(100) NOT NULL,
     body TEXT NOT NULL,
     PRIMARY KEY (id)
-)
+);
+CREATE TABLE IF NOT EXISTS adminuser(
+    id INT NOT NULL AUTO_INCREMENT,
+    usereName VARCHAR (200),
+   email text ,
+    PRIMARY KEY (id)
+);
 INSERT into register (firstName, lastName, email,numberPhone) VALUES ("Jihed", "Abidi", "jiheda14@gmail.com" ,"29490730");
 INSERT into register (firstName, lastName, email,numberPhone) VALUES ("mohamed dhia", "aouichaoui", "dhia12aouichaoui@gmail.com","27211712");
 
