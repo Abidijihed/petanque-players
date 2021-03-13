@@ -33,12 +33,14 @@ class Admin extends Component {
              this.handleClick(e)
           })
     }
+    //toggle beteewn admin view and form view 
     handleClick(e){
         e.preventDefault()
         this.setState({
             togle:!this.state.togle
         })
     }
+    //saving Form  inputs value
     handleChange(e){ 
         this.setState({[e.target.name]:e.target.value})
         console.log(
@@ -46,8 +48,7 @@ class Admin extends Component {
         );
       }
   delete(id){
-      axios.delete('/post/delete/'+id,{
-       
+      axios.delete('/post/delete/'+id,{  
       })
       .then((res)=>{
         this.GetData()

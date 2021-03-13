@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon server/index.js",
-    "react-dev": "webpack -d --watch",
-    "db:post": "node database-mysql/seed.js"
+    "react-dev": "webpack -d --watch"
+  
   },
-  "author": "Hack Reactor Curriculum Team <curriculum.team@hackreactor.com>",
+  "author": "Jihed Abidi",
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.23.1",

@@ -13,7 +13,7 @@ class Post extends Component {
     }
     this.handleClick=this.handleClick.bind(this)
   }
-
+//the user can add some poste
  handleClick(){
    const{title,namee,imageUrl,body}=this.state
    axios.post('/new/new',{

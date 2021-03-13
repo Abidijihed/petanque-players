@@ -207,6 +207,10 @@ button {
   margin-left: 10px;
   font-family: 'Francois One';
   color: #ffffff;
+  width: 100px; 
+  height: 100px; 
+  display: block; 
+  text-indent: -9999px;
 }
 
 .main {

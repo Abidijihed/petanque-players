@@ -36,6 +36,7 @@ addUser(e){
       {[e.target.name]:e.target.value}
     );
   }
+  //check the form inputs that can not be empty
      check(e){
        e.preventDefault()
        const {firstName ,lastName, email, numberPhone}=this.state

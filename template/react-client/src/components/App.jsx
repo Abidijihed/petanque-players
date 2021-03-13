@@ -30,11 +30,11 @@ class App extends React.Component{
            console.log(error)
        })
    }
-
+//changing view between componenet
     renderView(){
         const {view,data}=this.state 
         if(view ==='home'){
-            return <Home handleClick={(post)=>this.changeView('anypost',post)} data={data}/>
+            return <Home data={data}/>
         }else if(view ==='form'){
            return <Form mydata={data}/>
         }else if(view === 'Post'){
@@ -50,7 +50,7 @@ class App extends React.Component{
               <div className="nav">
                   <span className='logo'
                       onClick={()=>this.changeView('home')}>
-                        HOME PAGE
+                       <img className="logo" src='https://thumbs.dreamstime.com/b/boules-red-orange-yellow-tone-fire-white-background-sport-ball-logo-design-petanque-logo-pantangue-original-name-92966076.jpg' />
                   </span>
                   <span className={this.state.view === 'Admin'
                    ? 'nav-selected'

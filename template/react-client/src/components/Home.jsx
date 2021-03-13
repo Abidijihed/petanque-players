@@ -8,7 +8,7 @@ class Home extends Component {
           data:[]
         }
     }
-    
+  //get all poste and render them   
  componentDidMount(){
    axios.get('/post/post').then(res=>{
             this.setState({
@@ -26,9 +26,9 @@ class Home extends Component {
                   <ul>
               {this.state.data.map((e,index)=>
               <li className="feed-list-item" key={index}>
-          <div className="feed-list-item-title" onClick={()=>this.props.handleClick(e)}>{e.title}</div>
+          <div className="feed-list-item-title" >{e.title}</div>
           <div className="feed-list-item-byline"><span className="feed-list-item-byline-author">{e.namee}</span>{ moment(e.createdAt).fromNow()}</div>
-         <img src={e.imageUrl} onClick={()=>this.props.handleClick(e)} className="feed-list-item-image"/>
+         <img src={e.imageUrl}  className="feed-list-item-image"/>
          <span className="feed-list-item-lede">{e.body}</span>
       </li>
     )}
